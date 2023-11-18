@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import styles from './styles.module.scss';
+import Navigation from '@/components/Navigation';
+import { Providers } from '@/components/Provider';
+import Top from '@/components/Top';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -10,13 +10,28 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
 }) {
+  const isLogedIn = false
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      <body className={styles.layoutWrapper}>
+        <Providers>
+          <div className={styles.top}>
+            <Top/>
+          </div>
+          <div className={styles.main}>
+            {/* {isLogedIn &&
+              <Navigation/>
+            } */}
+            {children}
+          </div>
+        </Providers>
+        
+      </body>
     </html>
   )
 }

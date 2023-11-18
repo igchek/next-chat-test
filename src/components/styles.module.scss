@@ -1,0 +1,134 @@
+@use '../styles/variables';
+
+.navigation{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-color: black;
+    border:2px;
+}
+
+
+.chatMicroWrapepr{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    .imgSegment{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width:100% ;
+        height: 100%;
+        .imgSocket{
+            border-radius: 50%;
+        }
+    }
+    .titleSegment{
+        width:100% ;
+        height: 100%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .audienceListSegment{
+        grid-column-start: 3;
+        width:100% ;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .audienceSocket{
+            background-color: variables.$interfaceGlobal;
+            color: variables.$backgroundGlobal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            height: 50%;
+        }
+    }
+}
+
+.top{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    justify-content: flex-start;
+    .profileUnit{
+        // grid-column-start: 1;
+        // grid-column-end: 2;
+
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        // grid-template-columns: 25% 1fr;
+        .imgSegment{
+            // grid-column-start: 1;
+            // grid-column-end: 2;
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .img{
+                border-radius: 50%;
+                aspect-ratio: 1/1;
+                height: 80%;
+                margin: 0;
+                background-size: contain;
+                padding: 0;
+            }
+        }
+        .nick{
+            // grid-column-start: 2;
+            // grid-column-end: 3;
+            box-sizing: content-box;
+            display: flex;
+            width: auto;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+            justify-content: center;
+            align-items: center;
+            color: variables.$backgroundGlobal;
+        }
+    }
+}
+
+.link{
+    border-color: variables.$backgroundGlobal;
+    border-radius: 15%;
+    color: variables.$backgroundGlobal;
+    
+}
+
+.signSegment{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 15px;
+}
+.signUnit{
+    border-color: variables.$backgroundGlobal;
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    width: auto;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:variables.$backgroundGlobal ;
+    
+}
